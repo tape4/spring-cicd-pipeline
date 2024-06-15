@@ -42,7 +42,8 @@ jobs:
           path: ./Dockerfile
 
   CD_Delivery_to_ECR:
-    name: Continuous Integration
+    name: CD_Delivery_to_ECR
+    needs: CI
     runs-on: ubuntu-latest
 
     env:
