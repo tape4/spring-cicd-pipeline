@@ -92,8 +92,6 @@ jobs:
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG -t $ECR_REGISTRY/$ECR_REPOSITORY:latest .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY --all-tags
           echo "image=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG&latest" >> $GITHUB_OUTPUT
-#          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:latest .
-#          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
       - name: Delete Oldest ECR Image
         run: |
